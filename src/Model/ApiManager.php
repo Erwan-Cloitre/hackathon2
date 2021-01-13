@@ -10,7 +10,7 @@ class ApiManager
     {
         $client = HttpClient::create();
 
-        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/1');
+        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/2');
 
         $statusCode = $response->getStatusCode();
 

@@ -1,6 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {{ dump(api) }}
-    <h1>Hello Wilder !</h1>
+
+    <img src="{{ api.image.url }}"><br/>
+    Nom : {{ api.name }}<br/>
+    Intelligence : {{ api.powerstats.intelligence }}<br/>
+    Force : {{ api.powerstats.strength }}<br/>
+    Vitesse : {{ api.powerstats.speed }}<br/>
+    Durabilité : {{ api.powerstats.durability }}<br/>
+    Puissance : {{ api.powerstats.power }}<br/>
+    Combat : {{ api.powerstats.combat }}<br/>
+
+
 {% endblock %}
