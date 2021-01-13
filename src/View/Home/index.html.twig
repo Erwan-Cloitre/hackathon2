@@ -2,7 +2,13 @@
 
 {% block content %}
 
-    <img src="{{ api.image.url }}"><br/>
+    <div style='display:flex'>
+
+        <div><img src='{{ api.image.url }}'></div>
+
+        <div><img src='{{ api2.image.url }}'></div>
+
+    </div>
     Nom : {{ api.name }}<br/>
     Intelligence : {{ api.powerstats.intelligence }}<br/>
     Force : {{ api.powerstats.strength }}<br/>
