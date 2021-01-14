@@ -17,8 +17,10 @@ class HomeController extends AbstractController
     {
         $apimanager = new ApiManager();
         $api = $apimanager->selectAll();
+        $api2 = $apimanager->selectAll2();
+        $api3 = $apimanager->selectAll3();
 
-        return $this->twig->render('Home/index.html.twig', ['api' => $api]);
+        return $this->twig->render('Home/index.html.twig', ['api' => $api, 'api2' => $api2, 'api3' => $api3]);
     }
 
     /**
