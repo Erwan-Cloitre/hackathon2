@@ -1,12 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+    {{ dump(api) }}
     <section class="container-fluid pb-5 bg-grey">
         <div class="row background-img"></div>
 
         <div class="row ">
             <div class="col text-center mb-5">
-                <h2 class="bangers">Règles du jeu</h2>
+                <h2 class="bangers">Bienvenu sur HerosFight !</h2>
             </div>
         </div>
 
@@ -28,7 +29,7 @@
             </div>
 
             <div class="col-4 d-flex">
-                <img class="img mx-auto my-auto" src="{{ hero1.photo }}" alt=" hero photo"/>
+                <img class="img mx-auto my-auto" src="{{ api.image.url }}" alt=" hero photo"/>
             </div>
 
             <div class="col-4">
@@ -46,7 +47,7 @@
 
         <div class="row pr-5 mt-5 mb-5">
             <div class="col-4 d-flex">
-                <img class="img mx-auto my-auto" src="{{ hero2.photo }}" alt="hero photo "/>
+                <img class="img mx-auto my-auto" src="{{ api2.image.url }}" alt="hero photo "/>
             </div>
 
             <div class="col-4 pl-5">
@@ -60,13 +61,13 @@
             </div>
 
             <div class="col-4 d-flex">
-                <img class="img mx-auto my-auto" src="{{ hero3.photo }}" alt="hero photo "/>
+                <img class="img mx-auto my-auto" src="{{ api3.image.url }}" alt="hero photo "/>
             </div>
         </div>
 
         <div class="row ">
             <div class="col justify-content-center d-flex">
-                <button type="button" onclick="document.location.href='/player'" class="btn btn-index btn-primary">JOUER</button>
+                <button type="button" onclick="document.location.href='/home/hero'" class="btn btn-success">JOUER</button>
             </div>
         </div>
 
