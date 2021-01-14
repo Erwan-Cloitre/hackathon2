@@ -4,6 +4,7 @@
     <h1>Selectionne ton HERO !</h1>
 
     <div style='display:flex'>
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api.image.url }}">
                 <div class="card-body">
@@ -14,10 +15,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api2.image.url }}">
                 <div class="card-body">
@@ -28,10 +35,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api2.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api2.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api2.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api2.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api3.image.url }}">
                 <div class="card-body">
@@ -42,10 +55,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api3.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api3.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api3.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api3.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api4.image.url }}">
                 <div class="card-body">
@@ -56,11 +75,17 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api4.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api4.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api4.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api4.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
-                <div>
-                </div>
+            </div>
+        </div>
+        </form>
 
-                <div class="card">
+        <form method="post" action="startGame">
+                <div class="card" style="display: none">
                     <div class="card-image"><img src="{{ api5.image.url }}">
                         <div class="card-body">
                             <h3>{{ api5.name }}</h3>
@@ -70,12 +95,15 @@
                             <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api5.powerstats.durability }}</p>
                             <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api5.powerstats.power }}</p>
                             <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api5.powerstats.combat }}</p>
+                            <input type="text" name="id" value="{{ api5.id }}" style="display: none">
+                            <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                                Choisir ce HERO
+                            </button>
                         </div>
                     </div>
                 </div>
+        </form>
             </div>
-        </div>
-    </div>
     <br/>
     <br/>
     <hr/>
@@ -83,6 +111,7 @@
     <br/>
 
     <div style='display:flex'>
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api6.image.url }}">
                 <div class="card-body">
@@ -93,10 +122,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api6.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api6.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api6.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api6.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api7.image.url }}">
                 <div class="card-body">
@@ -107,10 +142,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api7.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api7.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api7.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api7.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api8.image.url }}">
                 <div class="card-body">
@@ -121,10 +162,16 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api8.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api8.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api8.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api8.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
+        </form>
 
+        <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api9.image.url }}">
                 <div class="card-body">
@@ -135,10 +182,14 @@
                     <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api9.powerstats.durability }}</p>
                     <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api9.powerstats.power }}</p>
                     <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api9.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api9.id }}" style="display: none">
+                    <button  class="col btn btn-succes" type="submit" data-toggle="modal" >
+                        Choisir ce HERO
+                    </button>
                 </div>
             </div>
         </div>
-
+        </form>
     </div>
 
 
