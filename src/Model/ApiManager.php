@@ -27,7 +27,7 @@ class ApiManager
     {
         $client = HttpClient::create();
 
-        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/620');
+        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/228');
 
         $statusCode = $response->getStatusCode();
 
@@ -44,7 +44,7 @@ class ApiManager
     {
         $client = HttpClient::create();
 
-        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/70');
+        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/502');
 
         $statusCode = $response->getStatusCode();
 
@@ -156,7 +156,7 @@ class ApiManager
     {
         $client = HttpClient::create();
 
-        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/389');
+        $response = $client->request('GET', 'https://superheroapi.com/api/10214898537337411/289');
 
         $statusCode = $response->getStatusCode();
 
