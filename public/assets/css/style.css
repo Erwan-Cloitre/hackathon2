@@ -35,15 +35,74 @@
   font-family: 'Playfair Display', serif;
   color: #777;
 }
-
 .icon{
   margin-right: 10px;
 }
-
 .card-body p{
   margin: 6px;
 }
-
 .card-body h3{
   margin: 5px;
 }
+body{
+  background-image: linear-gradient(to right, #043783, #3f215b, #401337, #310d1c, #1e0707);
+  margin: 20px;
+}
+.h2, h3, h4, h5, h6, p, li{
+  color: #fcfcfc;
+}
+.bangers{
+  text-align: bottom;
+  top: 5%;
+}
+.img{
+  box-shadow:2px 2px 2px gray,
+  -1px -1px 2px white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+}
+.img1{
+  box-shadow:2px 2px 2px gray,
+  -1px -1px 2px white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: right;
+}
+.btn-success{
+  height: 100px;
+  width: 130px;
+  color: black;
+  left: 160px;
+  position: relative;
+}
+.bangers{
+ text-decoration: underline;
+}
+.bangers-text2{
+  position: relative;
+  left: 420px;
+  top: -160px;
+
+}.bangers-text1{
+  position: relative;
+  left: 570px;
+  color: gold;
+  text-decoration: underline;
+}
+.bangers-text3{
+  text-decoration: underline;
+  position: relative;
+  left: 420px;
+  top: -160px;
+}
+.bangers-text4{
+ color: black;
+}
+
