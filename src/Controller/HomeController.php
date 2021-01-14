@@ -57,8 +57,8 @@ class HomeController extends AbstractController
             'api10' => $api10
         ]);
     }
-    public function startGame(){
-
+    public function startGame()
+    {
         $apimanager = new ApiManager();
         $api = $apimanager->selectAll();
         $api2 = $apimanager->selectAll2();
