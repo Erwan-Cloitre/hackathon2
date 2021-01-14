@@ -1,0 +1,63 @@
+{% extends 'fight.html.twig' %}
+
+{% block content %}
+    <h1 style="color: #8d0e10; text-align: center; font-size: 30pt; margin-top: 50px">ROUND 4</h1>
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img class="hero-img" src="{{ api.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api.name }}</h3>
+                    <p><img class="icon" src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api.powerstats.intelligence }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api.powerstats.strength }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api.powerstats.speed }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api.powerstats.durability }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api.powerstats.power }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api.id }}" style="display: none">
+                </div>
+            </div>
+        </div>
+
+        <div class="card result" style="height: 300px; width: 300px; margin: 0px; margin-top: 250px; display: block">
+            <div style="margin: 10px">
+            <p>Il te reste {{ new1 }} point de vie !</p>
+            <p>Il reste {{ new2 }} point de vie à ton ennemi {{ api2.name }} !</p>
+            </div>
+            <form action="finalRound" method="post">
+                <input name="new1" value="{{ new1 }}" style="display: none">
+                <input name="new2" value="{{ new2 }}" style="display: none">
+                <input name="id" value="{{ api.id }}" style="display: none">
+                <input name="id2" value="{{ api2.id }}" style="display: none">
+                <input type="text" name="intel" value="{{ api.powerstats.intelligence }}" style="display: none">
+                <input type="text" name="force" value="{{ api.powerstats.strength }}" style="display: none">
+                <input type="text" name="vitesse" value="{{ api.powerstats.speed }}" style="display: none">
+                <input type="text" name="vie" value="{{ api.powerstats.durability }}" style="display: none">
+                <input type="text" name="puissance" value="{{ api.powerstats.power }}" style="display: none">
+                <input type="text" name="combat" value="{{ api.powerstats.combat }}" style="display: none">
+                <input type="text" name="intel2" value="{{ api2.powerstats.intelligence }}" style="display: none">
+                <input type="text" name="force2" value="{{ api2.powerstats.strength }}" style="display: none">
+                <input type="text" name="vitesse2" value="{{ api2.powerstats.speed }}" style="display: none">
+                <input type="text" name="vie2" value="{{ api2.powerstats.durability }}" style="display: none">
+                <input type="text" name="puissance2" value="{{ api2.powerstats.power }}" style="display: none">
+                <input type="text" name="combat2" value="{{ api2.powerstats.combat }}" style="display: none">
+            <button style="margin: 10px; margin-left: 25px; z-index: 1" class="button-versus">Round suivant !</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <div class="card-image"><img class="hero-img" src="{{ api2.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api2.name }}</h3>
+                    <p><img class="icon" src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api2.powerstats.intelligence }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api2.powerstats.strength }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api2.powerstats.speed }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api2.powerstats.durability }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api2.powerstats.power }}</p>
+                    <p><img class="icon" src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api2.powerstats.combat }}</p>
+                    <input type="text" name="id" value="{{ api2.id }}" style="display: none">
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

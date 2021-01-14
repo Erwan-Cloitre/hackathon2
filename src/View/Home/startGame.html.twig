@@ -22,5 +22,22 @@
         </div>
     </div>
     </div>
-    <button>Prêt ?</button>
+    <form action="round1" method="post">
+        <input name="id" value="{{ api.id }}" style="display: none">
+        <input name="id2" value="{{ api2.id }}" style="display: none">
+        <input type="text" name="intel" value="{{ api.powerstats.intelligence }}" style="display: none">
+        <input type="text" name="force" value="{{ api.powerstats.strength }}" style="display: none">
+        <input type="text" name="vitesse" value="{{ api.powerstats.speed }}" style="display: none">
+        <input type="text" name="vie" value="{{ api.powerstats.durability }}" style="display: none">
+        <input type="text" name="puissance" value="{{ api.powerstats.power }}" style="display: none">
+        <input type="text" name="combat" value="{{ api.powerstats.combat }}" style="display: none">
+        <input type="text" name="intel2" value="{{ api2.powerstats.intelligence }}" style="display: none">
+        <input type="text" name="force2" value="{{ api2.powerstats.strength }}" style="display: none">
+        <input type="text" name="vitesse2" value="{{ api2.powerstats.speed }}" style="display: none">
+        <input type="text" name="vie2" value="{{ api2.powerstats.durability }}" style="display: none">
+        <input type="text" name="puissance2" value="{{ api2.powerstats.power }}" style="display: none">
+        <input type="text" name="combat2" value="{{ api2.powerstats.combat }}" style="display: none">
+    <button class="button-versus">Prêt pour le combat ?</button>
+    </form>
+
 {% endblock %}

@@ -1,0 +1,102 @@
+body{
+  background-image: url("../../assets/images/fight.webp");
+  width: 100%;
+  height: 100%;
+  font-family: "Comic Sans MS";
+}
+
+.result{
+  color: #8d0e10;
+  font-family: "Comic Sans MS";
+  font-size: 17pt;
+}
+
+.card {
+  display: flex;
+  width: 15%; /*1*/
+  margin-right: 100px; /*2*/
+  margin-left: 50px; /*2*/
+  background-image: url("../../assets/images/hero-background.jpg");
+  box-shadow: 0px 5px 20px #999; /*4*/
+  border-style:solid;
+  border-color:black;
+  opacity: 0.9;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.card:first-child{
+  margin-left: 320px;
+}
+
+.card a { /*5*/
+  color: #fcfcfc;
+  text-decoration: none;
+}
+.card-image {
+  height: 600px;/*1*/
+  width: 15em;
+  position: relative;/*2*/
+  overflow: hidden;/*3*/
+}
+.card-image img {
+  height: 280px;
+  width: 100%;
+  position: relative; top:10px; left:10px;
+}
+.card-body {
+  text-align:center;  /*1*/
+  box-sizing: border-box; /*3*/
+}
+.card-excerpt {
+  font-family: 'Playfair Display', serif;
+  color: #777;
+}
+
+.icon{
+  margin-right: 15px;
+}
+
+.card-body p{
+  margin: 6px;
+}
+
+.card-body h3{
+  margin: 5px;
+}
+
+.hero{
+  width: 400px;
+  height: 533px;
+  margin-top: 160px;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.ennemy{
+  width: 400px;
+  height: 533px;
+  margin-top: 160px;
+  opacity: 0.85;
+  margin-left: 820px;
+}
+
+.name-hero{
+  text-align: center;
+  font-size: 40pt;
+  padding-left: 20px;
+}
+
+.name-ennemy{
+  text-align: center;
+  font-size: 40pt;
+  padding-left: 820px;
+}
+
+.button-versus{
+  font-family: "Comic Sans MS";
+  font-size: 20pt;
+  width: 250px;
+  height: 80px;
+  margin-left: 670px;
+  background-image: linear-gradient(to bottom, #b61818, #a11314, #8d0e10, #7a090c, #670505);}

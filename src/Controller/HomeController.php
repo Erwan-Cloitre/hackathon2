@@ -72,4 +72,360 @@ class HomeController extends AbstractController
             'api2' => $api2
         ]);
     }
+
+    public function round1()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $apimanager = new ApiManager();
+            $id =
+                [
+                    'id1' => $_POST['id'],
+                    'id2' => $_POST['id2']
+                ];
+            $stats1 =
+                [
+                    '1' => $_POST['intel'],
+                    '2' => $_POST['force'],
+                    '3' => $_POST['vitesse'],
+                    '4' => $_POST['vie'],
+                    '5' => $_POST['puissance'],
+                    '6' => $_POST['combat'],
+                ];
+
+            $stats2 =
+                [
+                    '7' => $_POST['intel2'],
+                    '8' => $_POST['force2'],
+                    '9' => $_POST['vitesse2'],
+                    '10' => $_POST['vie2'],
+                    '11' => $_POST['puissance2'],
+                    '12' => $_POST['combat2'],
+                ];
+            $maxPdv1 = 100;
+            $maxPdv2 = 100;
+            $damage = 0;
+            $damage1 = $stats1[rand(1,6)];
+            $damage2 = $stats2[rand(7,12)];
+            if ($damage1 > $damage2) {
+                $damage = $damage1 - $damage2;
+                $new2 = $maxPdv2 - $damage;
+                $new1 = $maxPdv1;
+            }elseif ($damage1 < $damage2){
+                $damage =  $damage2 - $damage1;
+                $new1 = $maxPdv1 - $damage;
+                $new2 = $maxPdv2;
+            }else{
+                $new1 = $maxPdv1;
+                $new2 = $maxPdv2;
+            }
+            $api = $apimanager->selectOneHero($id['id1']);
+            $api2 = $apimanager->selectOneHero($id['id2']);
+        }
+        return $this->twig->render('Home/fight.html.twig', [
+            'api' => $api,
+            'api2' => $api2,
+            'damage' => $damage,
+            'new1' => $new1,
+            'new2' => $new2
+        ]);
+    }
+
+    public function round2()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $apimanager = new ApiManager();
+            $id =
+                [
+                    'id1' => $_POST['id'],
+                    'id2' => $_POST['id2']
+                ];
+            $pdv =
+                [
+                    'new1' => $_POST['new1'],
+                    'new2' => $_POST['new2']
+                ];
+            $stats1 =
+                [
+                    '1' => $_POST['intel'],
+                    '2' => $_POST['force'],
+                    '3' => $_POST['vitesse'],
+                    '4' => $_POST['vie'],
+                    '5' => $_POST['puissance'],
+                    '6' => $_POST['combat'],
+                ];
+
+            $stats2 =
+                [
+                    '7' => $_POST['intel2'],
+                    '8' => $_POST['force2'],
+                    '9' => $_POST['vitesse2'],
+                    '10' => $_POST['vie2'],
+                    '11' => $_POST['puissance2'],
+                    '12' => $_POST['combat2'],
+                ];
+            $maxPdv1 = $pdv['new1'];
+            $maxPdv2 = $pdv['new2'];
+            $damage = 0;
+            $damage1 = $stats1[rand(1,6)];
+            $damage2 = $stats2[rand(7,12)];
+            if ($damage1 > $damage2) {
+                $damage = $damage1 - $damage2;
+                $new2 = $maxPdv2 - $damage;
+                $new1 = $maxPdv1;
+            }elseif ($damage1 < $damage2){
+                $damage =  $damage2 - $damage1;
+                $new1 = $maxPdv1 - $damage;
+                $new2 = $maxPdv2;
+            }else{
+                $new1 = $maxPdv1;
+                $new2 = $maxPdv2;
+            }
+            $api = $apimanager->selectOneHero($id['id1']);
+            $api2 = $apimanager->selectOneHero($id['id2']);
+        }
+        return $this->twig->render('Home/fight2.html.twig', [
+            'api' => $api,
+            'api2' => $api2,
+            'damage' => $damage,
+            'new1' => $new1,
+            'new2' => $new2
+        ]);
+    }
+
+    public function round3()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $apimanager = new ApiManager();
+            $id =
+                [
+                    'id1' => $_POST['id'],
+                    'id2' => $_POST['id2']
+                ];
+            $pdv =
+                [
+                    'new1' => $_POST['new1'],
+                    'new2' => $_POST['new2']
+                ];
+            $stats1 =
+                [
+                    '1' => $_POST['intel'],
+                    '2' => $_POST['force'],
+                    '3' => $_POST['vitesse'],
+                    '4' => $_POST['vie'],
+                    '5' => $_POST['puissance'],
+                    '6' => $_POST['combat'],
+                ];
+
+            $stats2 =
+                [
+                    '7' => $_POST['intel2'],
+                    '8' => $_POST['force2'],
+                    '9' => $_POST['vitesse2'],
+                    '10' => $_POST['vie2'],
+                    '11' => $_POST['puissance2'],
+                    '12' => $_POST['combat2'],
+                ];
+            $maxPdv1 = $pdv['new1'];
+            $maxPdv2 = $pdv['new2'];
+            $damage = 0;
+            $damage1 = $stats1[rand(1,6)];
+            $damage2 = $stats2[rand(7,12)];
+            if ($damage1 > $damage2) {
+                $damage = $damage1 - $damage2;
+                $new2 = $maxPdv2 - $damage;
+                $new1 = $maxPdv1;
+            }elseif ($damage1 < $damage2){
+                $damage =  $damage2 - $damage1;
+                $new1 = $maxPdv1 - $damage;
+                $new2 = $maxPdv2;
+            }else{
+                $new1 = $maxPdv1;
+                $new2 = $maxPdv2;
+            }
+            $api = $apimanager->selectOneHero($id['id1']);
+            $api2 = $apimanager->selectOneHero($id['id2']);
+            if ($new2 <= 0){
+                return $this->twig->render('Home/resultatGood.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }elseif ($new1 <= 0){
+                return $this->twig->render('Home/resultatBad.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }
+        }
+        return $this->twig->render('Home/fight3.html.twig', [
+            'api' => $api,
+            'api2' => $api2,
+            'damage' => $damage,
+            'new1' => $new1,
+            'new2' => $new2
+        ]);
+    }
+
+    public function round4()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $apimanager = new ApiManager();
+            $id =
+                [
+                    'id1' => $_POST['id'],
+                    'id2' => $_POST['id2']
+                ];
+            $pdv =
+                [
+                    'new1' => $_POST['new1'],
+                    'new2' => $_POST['new2']
+                ];
+            $stats1 =
+                [
+                    '1' => $_POST['intel'],
+                    '2' => $_POST['force'],
+                    '3' => $_POST['vitesse'],
+                    '4' => $_POST['vie'],
+                    '5' => $_POST['puissance'],
+                    '6' => $_POST['combat'],
+                ];
+
+            $stats2 =
+                [
+                    '7' => $_POST['intel2'],
+                    '8' => $_POST['force2'],
+                    '9' => $_POST['vitesse2'],
+                    '10' => $_POST['vie2'],
+                    '11' => $_POST['puissance2'],
+                    '12' => $_POST['combat2'],
+                ];
+            $maxPdv1 = $pdv['new1'];
+            $maxPdv2 = $pdv['new2'];
+            $damage = 0;
+            $damage1 = $stats1[rand(1,6)];
+            $damage2 = $stats2[rand(7,12)];
+            if ($damage1 > $damage2) {
+                $damage = $damage1 - $damage2;
+                $new2 = $maxPdv2 - $damage;
+                $new1 = $maxPdv1;
+            }elseif ($damage1 < $damage2){
+                $damage =  $damage2 - $damage1;
+                $new1 = $maxPdv1 - $damage;
+                $new2 = $maxPdv2;
+            }else{
+                $new1 = $maxPdv1;
+                $new2 = $maxPdv2;
+            }
+            $api = $apimanager->selectOneHero($id['id1']);
+            $api2 = $apimanager->selectOneHero($id['id2']);
+            if ($new2 <= 0){
+                return $this->twig->render('Home/resultatGood.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }elseif ($new1 <= 0){
+                return $this->twig->render('Home/resultatBad.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }
+        }
+        return $this->twig->render('Home/fight4.html.twig', [
+            'api' => $api,
+            'api2' => $api2,
+            'damage' => $damage,
+            'new1' => $new1,
+            'new2' => $new2
+        ]);
+    }
+
+    public function finalround()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $apimanager = new ApiManager();
+            $id =
+                [
+                    'id1' => $_POST['id'],
+                    'id2' => $_POST['id2']
+                ];
+            $pdv =
+                [
+                    'new1' => $_POST['new1'],
+                    'new2' => $_POST['new2']
+                ];
+            $stats1 =
+                [
+                    '1' => $_POST['intel'],
+                    '2' => $_POST['force'],
+                    '3' => $_POST['vitesse'],
+                    '4' => $_POST['vie'],
+                    '5' => $_POST['puissance'],
+                    '6' => $_POST['combat'],
+                ];
+
+            $stats2 =
+                [
+                    '7' => $_POST['intel2'],
+                    '8' => $_POST['force2'],
+                    '9' => $_POST['vitesse2'],
+                    '10' => $_POST['vie2'],
+                    '11' => $_POST['puissance2'],
+                    '12' => $_POST['combat2'],
+                ];
+            $maxPdv1 = $pdv['new1'];
+            $maxPdv2 = $pdv['new2'];
+            $damage = 0;
+            $damage1 = $stats1[rand(1,6)];
+            $damage2 = $stats2[rand(7,12)];
+            if ($damage1 > $damage2) {
+                $damage = $damage1 - $damage2;
+                $new2 = $maxPdv2 - $damage;
+                $new1 = $maxPdv1;
+            }elseif ($damage1 < $damage2){
+                $damage =  $damage2 - $damage1;
+                $new1 = $maxPdv1 - $damage;
+                $new2 = $maxPdv2;
+            }else{
+                $new1 = $maxPdv1;
+                $new2 = $maxPdv2;
+            }
+            $api = $apimanager->selectOneHero($id['id1']);
+            $api2 = $apimanager->selectOneHero($id['id2']);
+            if ($new2 <= 0){
+                return $this->twig->render('Home/resultatGood.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }elseif ($new1 <= 0){
+                return $this->twig->render('Home/resultatBad.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }
+        }
+        return $this->twig->render('Home/finalFight.html.twig', [
+            'api' => $api,
+            'api2' => $api2,
+            'damage' => $damage,
+            'new1' => $new1,
+            'new2' => $new2
+        ]);
+    }
 }
