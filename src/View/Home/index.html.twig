@@ -1,74 +1,56 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
     <section class="container-fluid pb-5 bg-grey">
         <div class="row background-img"></div>
-
         <div class="row ">
             <div class="col text-center mb-5">
-                <h2 class="bangers">Bienvenu sur HerosFight !</h2>
+                <h2 class="bangers-text1">Bienvenue sur HerosFight !</h2>
             </div>
         </div>
-
         <div class="row mb-5 mt-5 pl-5 pr-5">
-
             <div class="col-4 ">
                 <h3 class="bangers">Le but du jeu :</h3>
-
                 <ul>
                     <li>Tu dois mettre ton adversaire K.O</li>
                 </ul>
-
                 <h3 class="bangers">Tu gagnes quand :</h3>
-
                 <ul>
                     <li>Ton adversaire perd tous ses points de vie</li>
                     <li>Ou bien si tu as le plus de points de vie au bout des 6 tours.</li>
                 </ul>
             </div>
-
             <div class="col-4 d-flex">
                 <img class="img mx-auto my-auto" src="{{ api.image.url }}" alt=" hero photo"/>
             </div>
-
+            <div class="deroulement">
             <div class="col-4">
-                <h3 class="bangers">Le déroulement du jeu :</h3>
-
+                <h3 class="bangers-text3">Le déroulement du jeu :</h3>
                 <ul>
-                    <li>Six tours</li>
-                    <li>Tu choisis ton camp de personnages : bon ou mauvais ( CPU prend l'opposé )</li>
-                    <li>Tu sélectionnes 6 personnages parmi les 12 qui te sont proposés</li>
-                    <li>Tu as 100 points de vie</li>
-                    <li>Tes personnages possèdent 6 types d’attaque allant chacun de 0 à 100: Intelligence, force, endurance, puissance, tactique et vitesse</li>
+                    <li class="bangers-text2">c'est du tours/tours</li>
+                    <li class="bangers-text2">Tu sélectionnes ton personnages parmi les 8 qui te sont proposés</li>
+                    <li class="bangers-text2">Tu as 100 points de vie</li>
+                    <li class="bangers-text2">* (Tu combat contre des HEROS inconu (phrase a modif) </li>
+                    <li class="bangers-text2">Tes personnages possèdent 6 types d'attaque allant chacun de 0 à 100</li>
                 </ul>
             </div>
+            </div>
         </div>
-
         <div class="row pr-5 mt-5 mb-5">
             <div class="col-4 d-flex">
-                <img class="img mx-auto my-auto" src="{{ api2.image.url }}" alt="hero photo "/>
+                <img class="img1 mx-auto my-auto" src="{{ api2.image.url }}" alt="hero photo "/>
             </div>
-
             <div class="col-4 pl-5">
-                <h3 class="bangers">Déroulement d’un tour :</h3>
-
+                <h3 class="bangers-text3">Déroulement d'un tour :</h3>
                 <ul>
-                    <li>Le type d’attaque change à chaque tour de manière aléatoire</li>
-                    <li>Chaque joueur choisit un personnage de son dek</li>
-                    <li>On compare la valeur du type d’attaque de chaque personnage, celui qui a la plus petite valeur perd la différence en point de vie</li>
+                    <li class="bangers-text2">Le type d'attaque change à chaque tour de manière aléatoire</li>
+                    <li class="bangers-text2">Chaque joueur choisit un personnage de son dek</li>
+                    <li class="bangers-text2">On compare la valeur du type d'attaque de chaque personnage, celui qui a la plus petite valeur perd la différence en point de vie</li>
                 </ul>
             </div>
-
-            <div class="col-4 d-flex">
-                <img class="img mx-auto my-auto" src="{{ api3.image.url }}" alt="hero photo "/>
-            </div>
-        </div>
-
         <div class="row ">
             <div class="col justify-content-center d-flex">
                 <button type="button" onclick="document.location.href='/home/hero'" class="btn btn-success">JOUER</button>
             </div>
         </div>
-
     </section>
 {% endblock %}
