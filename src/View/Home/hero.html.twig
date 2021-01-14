@@ -2,99 +2,83 @@
 
 {% block content %}
 
-            <h2 class="bangers">Selectionne ton HERO !</h2>
-    <div style='display:flex' >
-        <div class="col-md-4 d-flex align-self-stretch text-center">
-            <div class="media block-6 services d-block step-back">
-                <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                    <img src="{{ api.image.url }}" height="300px" alt="Photo">
-                    <br/>
-                    Nom : {{ api.name }}<br/>
-                    Intelligence : {{ api.powerstats.intelligence }}<br/>
-                    Force : {{ api.powerstats.strength }}<br/>
-                    Vitesse : {{ api.powerstats.speed }}<br/>
-                    Point de vie : {{ api.powerstats.durability }}<br/>
-                    Puissance : {{ api.powerstats.power }}<br/>
-                    Combat : {{ api.powerstats.combat }}<br/>
-                    <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                        Choisir ce HERO
-                    </a>
-                </div>
-            </div>
-        </div>
 
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api2.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api2.name }}<br/>
-                Intelligence : {{ api2.powerstats.intelligence }}<br/>
-                Force : {{ api2.powerstats.strength }}<br/>
-                Vitesse : {{ api2.powerstats.speed }}<br/>
-                Point de vie : {{ api2.powerstats.durability }}<br/>
-                Puissance : {{ api2.powerstats.power }}<br/>
-                Combat : {{ api2.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api.image.url }}">
+                <div class="card-body">
+                        <h3>{{ api.name }}</h3>
+                        <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api.powerstats.intelligence }}</p>
+                        <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api.powerstats.strength }}</p>
+                        <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api.powerstats.speed }}</p>
+                        <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api.powerstats.durability }}</p>
+                        <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api.powerstats.power }}</p>
+                        <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api.powerstats.combat }}</p>       
+                </div>
             </div>
         </div>
     </div>
 
-        <div class="col-md-4 d-flex align-self-stretch text-center">
-            <div class="media block-6 services d-block step-back">
-                <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                    <img src="{{ api3.image.url }}" height="300px" alt="Photo">
-                    <br/>
-                    Nom : {{ api3.name }}<br/>
-                    Intelligence : {{ api3.powerstats.intelligence }}<br/>
-                    Force : {{ api3.powerstats.strength }}<br/>
-                    Vitesse : {{ api3.powerstats.speed }}<br/>
-                    Point de vie : {{ api3.powerstats.durability }}<br/>
-                    Puissance : {{ api3.powerstats.power }}<br/>
-                    Combat : {{ api3.powerstats.combat }}<br/>
-                    <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                        Choisir ce HERO
-                    </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api2.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api2.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api2.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api2.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api2.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api2.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api2.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api2.powerstats.combat }}</p>
+                </div>
+
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api3.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api3.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api3.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api3.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api3.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api3.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api3.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api3.powerstats.combat }}</p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4 d-flex align-self-stretch text-center">
-            <div class="media block-6 services d-block step-back">
-                <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                    <img src="{{ api4.image.url }}" height="300px" alt="Photo">
-                    <br/>
-                    Nom : {{ api4.name }}<br/>
-                    Intelligence : {{ api4.powerstats.intelligence }}<br/>
-                    Force : {{ api4.powerstats.strength }}<br/>
-                    Vitesse : {{ api4.powerstats.speed }}<br/>
-                    Point de vie : {{ api4.powerstats.durability }}<br/>
-                    Puissance : {{ api4.powerstats.power }}<br/>
-                    Combat : {{ api4.powerstats.combat }}<br/>
-                    <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                        Choisir ce HERO
-                    </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api4.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api4.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api4.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api4.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api4.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api4.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api4.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api4.powerstats.combat }}</p>
                 </div>
-            </div>
+            <div>
         </div>
+    </div>
 
-        <div class="col-md-4 d-flex align-self-stretch text-center">
-            <div class="media block-6 services d-block step-back">
-                <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                    <img src="{{ api5.image.url }}" height="300px" alt="Photo">
-                    <br/>
-                    Nom : {{ api5.name }}<br/>
-                    Intelligence : {{ api5.powerstats.intelligence }}<br/>
-                    Force : {{ api5.powerstats.strength }}<br/>
-                    Vitesse : {{ api5.powerstats.speed }}<br/>
-                    Point de vie : {{ api5.powerstats.durability }}<br/>
-                    Puissance : {{ api5.powerstats.power }}<br/>
-                    Combat : {{ api5.powerstats.combat }}<br/>
-                    <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                        Choisir ce HERO
-                    </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api5.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api5.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api5.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api5.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api5.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api5.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api5.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api5.powerstats.combat }}</p>
                 </div>
             </div>
         </div>
@@ -106,100 +90,92 @@
     <br/>
     <br/>
 
-<div style='display:flex'>
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api6.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api6.name }}<br/>
-                Intelligence : {{ api6.powerstats.intelligence }}<br/>
-                Force : {{ api6.powerstats.strength }}<br/>
-                Vitesse : {{ api6.powerstats.speed }}<br/>
-                Point de vie : {{ api6.powerstats.durability }}<br/>
-                Puissance : {{ api6.powerstats.power }}<br/>
-                Combat : {{ api6.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api6.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api6.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api6.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api6.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api6.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api6.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api6.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api6.powerstats.combat }}</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api7.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api7.name }}<br/>
-                Intelligence : {{ api7.powerstats.intelligence }}<br/>
-                Force : {{ api7.powerstats.strength }}<br/>
-                Vitesse : {{ api7.powerstats.speed }}<br/>
-                Point de vie : {{ api7.powerstats.durability }}<br/>
-                Puissance : {{ api7.powerstats.power }}<br/>
-                Combat : {{ api7.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api7.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api7.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api7.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api7.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api7.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api7.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api7.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api7.powerstats.combat }}</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api8.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api8.name }}<br/>
-                Intelligence : {{ api8.powerstats.intelligence }}<br/>
-                Force : {{ api8.powerstats.strength }}<br/>
-                Vitesse : {{ api8.powerstats.speed }}<br/>
-                Point de vie : {{ api8.powerstats.durability }}<br/>
-                Puissance : {{ api8.powerstats.power }}<br/>
-                Combat : {{ api8.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api8.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api8.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api8.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api8.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api8.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api8.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api8.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api8.powerstats.combat }}</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api9.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api9.name }}<br/>
-                Intelligence : {{ api9.powerstats.intelligence }}<br/>
-                Force : {{ api9.powerstats.strength }}<br/>
-                Vitesse : {{ api9.powerstats.speed }}<br/>
-                Point de vie : {{ api9.powerstats.durability }}<br/>
-                Puissance : {{ api9.powerstats.power }}<br/>
-                Combat : {{ api9.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api9.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api9.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api9.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api9.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api9.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api9.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api9.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api9.powerstats.combat }}</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4 d-flex align-self-stretch text-center">
-        <div class="media block-6 services d-block step-back">
-            <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                <img src="{{ api10.image.url }}" height="300px" alt="Photo">
-                <br/>
-                Nom : {{ api10.name }}<br/>
-                Intelligence : {{ api10.powerstats.intelligence }}<br/>
-                Force : {{ api10.powerstats.strength }}<br/>
-                Vitesse : {{ api10.powerstats.speed }}<br/>
-                Point de vie : {{ api10.powerstats.durability }}<br/>
-                Puissance : {{ api10.powerstats.power }}<br/>
-                Combat : {{ api10.powerstats.combat }}<br/>
-                <a  class="col btn btn-succes" href="/home/fight/" data-toggle="modal" >
-                    Choisir ce HERO
-                </a>
+
+
+    <div style='display:flex'>
+        <div class="card">
+            <div class="card-image"><img src="{{ api10.image.url }}">
+                <div class="card-body">
+                    <h3>{{ api10.name }}</h3>
+                    <p><img src="https://img.icons8.com/pastel-glyph/64/000000/brain--v2.png" style="width: 32px !important;height: 32px"/>Intelligence {{ api10.powerstats.intelligence }}</p>
+                    <p><img src="https://img.icons8.com/fluent-systems-filled/24/000000/forward-punch.png" style="width: 32px !important;height: 32px"/>Force {{ api10.powerstats.strength }}</p>
+                    <p><img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" style="width: 32px !important;height: 32px"/>Vitesse {{ api10.powerstats.speed }}</p>
+                    <p><img src="https://img.icons8.com/fluent/48/000000/heart-plus.png" style="width: 32px !important;height: 32px"/>Point de vie {{ api10.powerstats.durability }}</p>
+                    <p><img src="https://img.icons8.com/material-sharp/24/000000/strength.png" style="width: 32px !important;height: 32px" &nbsp/>Puissance {{ api10.powerstats.power }}</p>
+                    <p><img src="https://img.icons8.com/android/24/000000/boxing.png" style="width: 32px !important;height: 32px" &nbsp/>Combat {{ api10.powerstats.combat }}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+
 {% endblock %}
