@@ -65,9 +65,11 @@ class HomeController extends AbstractController
             $id = $_POST['id'];
             $apimanager = new ApiManager();
             $api = $apimanager->selectOneHero($id);
+            $api2 = $apimanager->selectOneHero(rand(1,700));
         }
         return $this->twig->render('Home/startGame.html.twig', [
-            'api' => $api
+            'api' => $api,
+            'api2' => $api2
         ]);
     }
 }

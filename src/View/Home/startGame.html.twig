@@ -1,24 +1,25 @@
-{% extends 'layout.html.twig' %}
+{% extends 'versus.html.twig' %}
 
 {% block content %}
-    <div class="col-md-12 col-sm-12 text-center">
-        <h1 class="mb-4">Choisis ton HERO !</h1>
-    </div>
-    <div style='display:flex' >
+    <div style='display:flex'>
         <div class="col-md-4 d-flex align-self-stretch text-center">
             <div class="media block-6 services d-block step-back">
                 <div class="media-body p-2 mt-3 justify-content-center align-items-center">
-                    <img src="{{ api.image.url }}" height="300px" alt="Photo">
-                    <br/>
-                    Nom : {{ api.name }}<br/>
-                    Intelligence : {{ api.powerstats.intelligence }}<br/>
-                    Force : {{ api.powerstats.strength }}<br/>
-                    Vitesse : {{ api.powerstats.speed }}<br/>
-                    Point de vie : {{ api.powerstats.durability }}<br/>
-                    Puissance : {{ api.powerstats.power }}<br/>
-                    Combat : {{ api.powerstats.combat }}<br/>
+                    <img class="hero" src="{{ api.image.url }}" height="300px" alt="Photo">
+                    <h1 class="name-hero">{{ api.name }}</h1>
                 </div>
             </div>
         </div>
+
+        <div>
+         <div class="col-md-4 d-flex align-self-stretch text-center">
+            <div class="media block-6 services d-block step-back">
+                <div class="media-body p-2 mt-3 justify-content-center align-items-center">
+                    <img class="ennemy" src="{{ api2.image.url }}" height="300px" alt="Photo">
+                    <h1 class="name-ennemy">{{ api2.name }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 {% endblock %}

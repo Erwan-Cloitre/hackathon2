@@ -1,0 +1,32 @@
+body{
+  background-image: url("../../assets/images/versus.jpg");
+  background-size: cover;
+}
+
+.hero{
+  width: 400px;
+  height: 533px;
+  margin-top: 160px;
+  margin-left: 20px;
+  opacity: 0.85;
+}
+
+.ennemy{
+  width: 400px;
+  height: 533px;
+  margin-top: 160px;
+  opacity: 0.85;
+  margin-left: 820px;
+}
+
+.name-hero{
+  text-align: center;
+  font-size: 40pt;
+  padding-left: 20px;
+}
+
+.name-ennemy{
+  text-align: center;
+  font-size: 40pt;
+  padding-left: 750px;
+}
