@@ -13,6 +13,14 @@ use App\Model\ApiManager;
 
 class HomeController extends AbstractController
 {
+    public function index()
+    {
+        $apimanager = new ApiManager();
+        $api = $apimanager->selectAll();
+
+        return $this->twig->render('Home/index.html.twig', ['api' => $api]);
+    }
+
     /**
      * Display home page
      *
@@ -21,7 +29,7 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function hero()
     {
         $apimanager = new ApiManager();
         $api = $apimanager->selectAll();
@@ -35,7 +43,7 @@ class HomeController extends AbstractController
         $api9 = $apimanager->selectAll9();
         $api10 = $apimanager->selectAll10();
 
-        return $this->twig->render('Home/index.html.twig', [
+        return $this->twig->render('Home/hero.html.twig', [
             'api' => $api,
             'api2' => $api2,
             'api3' => $api3,
