@@ -20,6 +20,9 @@
 
         <h1 style="color: #8d0e10; width: 331px; text-align: center"> Ton ennemi {{ api2.name }} t'a humilié, tu réussiras la prochaine fois peut-être !</h1>
 
+        <form action="hero" method="post">
+            <button style="margin: 10px; margin-left: 25px; z-index: 1; position: absolute; top: 400px; left: 700px" class="button-versus">Rejouer ?</button>
+        </form>
         <div class="card">
             <div class="card-image"><img class="hero-img" src="{{ api2.image.url }}">
                 <div class="card-body">

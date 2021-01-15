@@ -79,6 +79,9 @@ body{
   -o-border-radius: 50%;
   border-radius: 50%;
   float: left;
+  width: 400px;
+  opacity: 0.85;
+  margin-left: 40px;
 }
 .img1{
   box-shadow:2px 2px 2px gray,
@@ -89,6 +92,12 @@ body{
   -o-border-radius: 50%;
   border-radius: 50%;
   float: right;
+  width: 400px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  position: absolute;
+  right: 150px;
+  bottom:-20px;
 }
 .btn-success{
   height: 100px;
@@ -102,7 +111,7 @@ body{
 }
 .bangers-text2{
   position: relative;
-  left: 420px;
+  left: 600px;
   top: -160px;
 }
 
@@ -115,10 +124,20 @@ body{
 .bangers-text3{
   text-decoration: underline goldenrod;
   position: relative;
-  left: 420px;
+  left: 580px;
   top: -160px;
 }
 .bangers-text4{
  color: white;
 }
 
+.play{
+  font-family: "Comic Sans MS";
+  font-size: 20pt;
+  width: 250px;
+  height: 80px;
+  position: absolute;
+  top: 200px;
+  left: 700px;
+  background-image: linear-gradient(to bottom, #b61818, #a11314, #8d0e10, #7a090c, #670505);
+}

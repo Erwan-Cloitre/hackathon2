@@ -182,6 +182,23 @@ class HomeController extends AbstractController
             }
             $api = $apimanager->selectOneHero($id['id1']);
             $api2 = $apimanager->selectOneHero($id['id2']);
+            if ($new2 <= 0){
+                return $this->twig->render('Home/resultatGood.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }elseif ($new1 <= 0){
+                return $this->twig->render('Home/resultatBad.html.twig', [
+                    'api' => $api,
+                    'api2' => $api2,
+                    'damage' => $damage,
+                    'new1' => $new1,
+                    'new2' => $new2
+                ]);
+            }
         }
         return $this->twig->render('Home/fight2.html.twig', [
             'api' => $api,
