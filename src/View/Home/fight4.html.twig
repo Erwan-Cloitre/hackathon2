@@ -20,8 +20,15 @@
 
         <div class="card result" style="height: 300px; width: 300px; margin: 0px; margin-top: 250px; display: block">
             <div style="margin: 10px">
-            <p>Il te reste {{ new1 }} point de vie !</p>
-            <p>Il reste {{ new2 }} point de vie à ton ennemi {{ api2.name }} !</p>
+                {% if new1 > new2 %}
+                    <p style="color: goldenrod">Tu as infligé {{ damage }} de dégâts à {{ api2.name }} !</p>
+                {% elseif new1 < new2 %}
+                    <p style="color: goldenrod">{{ api2.name }} t'a infligé {{ damage}} de dégâts !</p>
+                {% else %}
+                    <p style="color: goldenrod">Personne ne perd de point de vie !</p>
+                {% endif %}
+                <p>Il te reste {{ new1 }} point de vie !</p>
+                <p>Il reste {{ new2 }} point de vie à {{ api2.name }} !</p>
             </div>
             <form action="finalRound" method="post">
                 <input name="new1" value="{{ new1 }}" style="display: none">
