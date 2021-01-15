@@ -1,14 +1,25 @@
 .card {
   display: flex;
-  width: 300px; /*1*/
-  height: 560px;
+  width: 290px; /*1*/
+  height: 600px;
   margin-right: 50px; /*2*/
   margin-left: 35px; /*2*/
-  background-color: #fafafa; /*3*/
+  background-image: url("../../assets/images/hero-background.jpg");
   box-shadow: 0px 5px 20px #999; /*4*/
+  opacity: 0.9;
   border-style:solid;
   border-color:black;
 }
+
+.card button{
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: "Comic Sans MS";
+  background-image: linear-gradient(to bottom, #b61818, #a11314, #8d0e10, #7a090c, #670505);
+}
+
 .card a { /*5*/
   color: #fcfcfc;
   text-decoration: none;
@@ -29,24 +40,28 @@
   text-align:center;  /*1*/
   box-sizing: border-box; /*3*/
   color: #050505;
-  margin-left: 15px;
 }
 .card-excerpt {
   font-family: 'Playfair Display', serif;
   color: #777;
 }
 .icon{
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .card-body p{
   margin: 6px;
 }
 .card-body h3{
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 body{
-  background-image: linear-gradient(to right, #043783, #3f215b, #401337, #310d1c, #1e0707);
-  margin: 20px;
+  background-image: url("../../assets/images/fight.webp");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: "Comic Sans MS";
 }
 .h2, h3, h4, h5, h6, p, li{
   color: #fcfcfc;
@@ -83,21 +98,22 @@ body{
   position: relative;
 }
 .bangers{
- text-decoration: underline;
+ text-decoration: underline goldenrod;
 }
 .bangers-text2{
   position: relative;
   left: 420px;
   top: -160px;
+}
 
-}.bangers-text1{
+.bangers-text1{
   position: relative;
   left: 570px;
-  color: gold;
-  text-decoration: underline;
+  color: whitesmoke;
+  text-decoration: underline goldenrod;
 }
 .bangers-text3{
-  text-decoration: underline;
+  text-decoration: underline goldenrod;
   position: relative;
   left: 420px;
   top: -160px;

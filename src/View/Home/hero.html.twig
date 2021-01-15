@@ -1,9 +1,9 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1 class="bangers-text1">Selectionne ton HERO !</h1>
+    <h1 style="text-align: center; left: auto" class="bangers-text1">Selectionne ton HERO !</h1>
 
-    <div style='display:flex'>
+    <div style='display:flex; margin-left: 100px'>
         <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api.image.url }}">
@@ -106,11 +106,10 @@
             </div>
     <br/>
     <br/>
-    <hr/>
     <br/>
     <br/>
 
-    <div style='display:flex'>
+    <div style='display:flex; margin-left: 100px'>
         <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ api6.image.url }}">
